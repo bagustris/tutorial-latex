@@ -1,7 +1,11 @@
 \documentclass[12pt]{article}
+
+% Paket-paket yang digunakan pada penulisan artikel ini
 \usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage{authblk}
+\usepackage{listings}
+\usepackage{amssymb}
 
 \begin{document}
 \title{Tutorial \LaTeX\ Sederhana}
@@ -19,6 +23,19 @@ Institut Teknologi Sepuluh Nopember}
 \vspace{2pc}
 
 \section*{0 Set Up}
+Pada Ubuntu dan OS berbasis Debian lainnya, saya menyarankan untuk menginstall Latex dengan bantuan apt-get (apt). Untuk editor, saya menggunakan gedit dengan plugin Latex. Instalasi melalui apt-get untuk Ubuntu 16.04 dan versi diatasnya dengan perintah sebagai berikut,
+\begin{lstlisting}
+$ sudo apt-get install latex gedit-latex-plugin
+\end{lstlisting}
+maka Ubuntu anda sudah terinstall Latex, lebih sederhana dibandingkan dengan instalasi pada Windows. Silakan cek pada gedit, aktifkan plugin, edit - preference - plugin - Latex Plugin. Kemudian akan muncul tab "Latex" serta menu "Latex Tools" pada window "Gedit - Tools" anda.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=4.2in]{pict/gedit-latex.png}
+\end{center}
+\caption{Tampilan Gedit dengan plugin Latex}
+\end{figure}
+
 
 \section{Pendahuluan}
 \label{first}
@@ -146,7 +163,7 @@ text akan diletakkan di tengah.
 Gambar juga dapat dimasukkan dalam environment, yakni dengan \texttt{figure}.
 \begin{figure}
 \begin{center}
-\includegraphics[width=3.2in]{praat.eps}
+\includegraphics[width=3.2in]{pict/praat.eps}
 \end{center}
 \caption{detail caption gambar}
 \end{figure}
