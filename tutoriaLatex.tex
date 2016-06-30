@@ -1,18 +1,24 @@
 \documentclass[12pt]{article}
 \usepackage{graphicx}
 \usepackage{epstopdf}
+\usepackage{authblk}
 
 \begin{document}
 \title{Tutorial \LaTeX\ Sederhana}
+\author{Bagus Tris Atmaja}
+\affil{bagus@ep.its.ac.id\\
+Institut Teknologi Sepuluh Nopember}
+
 \maketitle
 
-\centerline{Bagus Tris Atmaja (btatmaja@gmail.com)}
 \centerline{Based on Extended Hands-On Research, ICTP 2015}
 
 \vspace{2.5pc}
 \centerline{Catatan sederhana yang saya harapkan seseorang telah memberitahu saya beberapa tahun yang lalu}
 \centerline{\it (Baca file .tex ketika anda membaca tulisan ini, atau tutorial ini akan sulit difahami)}
 \vspace{2pc}
+
+\section*{0 Set Up}
 
 \section{Pendahuluan}
 \label{first}
@@ -91,7 +97,7 @@ Jika anda tidak ingin persamaan tersebut berada di tengah, namun anda ingin mena
 \end{equation}
 
 Untuk menyitasi/merefer persamaan \ref{einstein1} anda bisa menggunakan \verb|\label{}| dan memanggilnya dengan \verb|\ref{}| seperti pada persamaan \ref{einstein1} diatas. Penulisan persamaan \ref{einstein1} diatas menggunakan environenment yang akan dibahas pada \ref{enviro}.
-}.
+
 
 Selain text dan persamaan matematika, ada banyak yang bisa kita lakukan dengan \LaTeX\, misalnya untuk membuat tabel, diagram, gambar persamaan bernomor, label, matriks, dll. Anda dapat mengatur batas kanan-kiri, atas-bawah, spasi, alignment,  {\it et cetera} dengan tingkat akurasi yang tinggi dibanding dengan penglihatan manusia. Dengan word processor, anda akan menghabiskan banyak waktu, tapi tidak bila anda menguasai \LaTeX.
 
