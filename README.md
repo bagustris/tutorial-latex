@@ -2,8 +2,12 @@
 
 Kompilasi:
 
-- latex tutorialLatex.tex
-- dvipdfmx tutorialLatex.dvi
+  - $ latex tutorialLatex.tex
+  - $ dvipdfmx tutorialLatex.dvi
+
+OR
+
+  - $ pdflatex tutorialLtex.tex
 
 To-do list:
 
@@ -15,3 +19,4 @@ To-do list:
 - Code snippet
 - Bibliography
 - Cite Reference, table, graphic
+- beamer

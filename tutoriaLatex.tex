@@ -193,6 +193,31 @@ Ada file opsional yang dapat di-load dalam dokumen. Sebuah file \texttt{*.cls} a
 
 Baris pertama meload class \textit{revtex}. Ini biasanya digunakan untuk persiapan jurnal, dan setiap jurnal biasanya menyediakan file .sty nya. File \texttt{sty} diasosiasikan dengan beberapa simbol matematika dan untuk menghandle gambar. Jika anda mengubah baris pertama dengan perintah lain, maka keseluruhan format dokumen akan berubah secara total, misalnya dari satu kolom menjadi dua kolom.
 
+\section{Membuat List}
+Salah satu teknik penting dalam penulisan adalah dengan memaparkan poin per poin atau yang dikenal dengan list, baik bullet maupun numbering.
+
+Unordered list, Contoh:
+\begin{itemize}
+\item Ini adalah unordered list pertama
+\item Ini adalah unordered list kedua
+    \begin{itemize}
+    \item Ini adalab sub-list pertama
+    \item ini adalah sub-list kedua
+    \end{itemize}
+\end{itemize}
+
+Ordered list, Contoh:
+\begin{enumerate}
+\item Ini adalah ordered list pertama
+\item Ini adalah ordered list kedua
+    \begin{enumerate}
+    \item Ini adalab sub-list pertama
+    \item ini adalah sub-list kedua
+    \end{enumerate}
+\item Ini adalah ordered list ketiga \ldots
+\end{enumerate}
+
+
 \section{Bibliography}
 Ada banyak cara untuk memasukkan bibliography atau referensi. Cara yang paling sederhana adalah dengan menggunakan environment yang disebut \texttt{thebibliography}.  Namun, untuk memudahkan manajemen referensi (untuk banyak referensi) biasanya orang menggunkankan BibTeX, yang mengatur sitasi sendiri secara terpisah dalam format file \texttt{*.bib}.  Sitasi dapat ditambahkan dengan: \cite{langer1989}.
 
