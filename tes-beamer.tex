@@ -1,0 +1,37 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[bahasa]{babel}
+\title{Membuat Presentasi Dengan Latex Beamer}
+\author{@btatmaja}
+\date{\today}
+\begin{document}
+	\frame{\titlepage}
+	\frame{
+		\frametitle{Table of Contents}
+		\tableofcontents
+	}
+	
+\section {1. Pengantar}
+\begin{frame}[t, fragile]{Slide pertama}
+Berikut adalah list berupa bullet:
+\begin{itemize}
+\item List1
+\item List2
+\item List3
+\end{itemize}
+\end{frame}
+
+\section{2. Kesimpulan}
+\begin{frame}[t, fragile]{Slide kedua}
+Berikut adalah list berupa angka:
+\begin{enumerate}
+\item List1
+\item List2
+\item List3
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[t, fragile]{Slide berisi gambar}
+\includegraphics[width=4in]{pict/gedit-symbol.png}
+\end{frame}
+\end{document}
