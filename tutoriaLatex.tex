@@ -217,6 +217,27 @@ Ordered list, Contoh:
 \item Ini adalah ordered list ketiga \ldots
 \end{enumerate}
 
+\section{Membuat Tabel}
+Contoh tabel sederhana dapat dibuat dengan perintah berikut,
+\begin{verbatim}
+\begin{tabular}{ l c r }
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9 \\
+\end{tabular}
+\end{verbatim}
+Hasilnya adalah sebagai berikut,\\
+\begin{tabular}{ l c r }
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9 \\
+\end{tabular}
+\\
+\\
+By default, tabel pada latex akan menempatkan teks anda di tengah, jika yang anda masukkan berupa gambar, maka gunakan perintah berikut agar vertically centered.
+\begin{verbatim}
+\raisebox{-.5\height}{\includegraphics[width=2in]{pict/m1}}
+\end{verbatim}
 
 \section{Bibliography}
 Ada banyak cara untuk memasukkan bibliography atau referensi. Cara yang paling sederhana adalah dengan menggunakan environment yang disebut \texttt{thebibliography}.  Namun, untuk memudahkan manajemen referensi (untuk banyak referensi) biasanya orang menggunkankan BibTeX, yang mengatur sitasi sendiri secara terpisah dalam format file \texttt{*.bib}.  Sitasi dapat ditambahkan dengan: \cite{langer1989}.
