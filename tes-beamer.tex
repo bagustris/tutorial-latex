@@ -11,7 +11,7 @@
 		\tableofcontents
 	}
 	
-\section {1. Pengantar}
+\section {1. Membuat list}
 \begin{frame}[t, fragile]{Slide pertama}
 Berikut adalah list berupa bullet:
 \begin{itemize}
@@ -21,7 +21,7 @@ Berikut adalah list berupa bullet:
 \end{itemize}
 \end{frame}
 
-\section{2. Kesimpulan}
+
 \begin{frame}[t, fragile]{Slide kedua}
 Berikut adalah list berupa angka:
 \begin{enumerate}
@@ -31,7 +31,26 @@ Berikut adalah list berupa angka:
 \end{enumerate}
 \end{frame}
 
+\section{2. Memasukkan gambar}
 \begin{frame}[t, fragile]{Slide berisi gambar}
-\includegraphics[width=4in]{pict/gedit-symbol.png}
+%\includegraphics[width=4in]{pict/gedit-symbol.png}
 \end{frame}
+
+\section{3. Membuat kolom}
+\begin{frame}[t, fragile] {Membuat kolom}
+Ada kalanya anda perlu membuat kolom, misalnya, gambar dikiri dan teks dikanan, contohnya seperti dibawah ini \\
+\begin{columns}
+\column{.5\textwidth}
+\includegraphics[width=2in]{pict/praat.eps}
+\column{.5\textwidth}
+\begin{verbatim}
+\begin{columns}
+\column{.5\textwidth}
+% isi kolom
+\column{.5\textwidth}
+\begin{verbatim}
+\end{verbatim}
+\end{columns}
+\end{frame}
+
 \end{document}
