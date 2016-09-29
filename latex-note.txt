@@ -44,4 +44,9 @@ Force image position:
 \caption{Write some caption here}\label{visina8}
 \end{figure}
 ===
+make two column:
+\documentclass[twocolumn]{article}
+...
+\twocolumn
 
+\onecolumn
