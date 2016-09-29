@@ -35,4 +35,13 @@ There are three commands here that work the same in the example:
     \newline
     \hfill \break 
 ===
+Force image position:
+\usepackage{float}
+...
+\begin{figure}[H]
+\centering
+\includegraphics{slike/visina8}
+\caption{Write some caption here}\label{visina8}
+\end{figure}
+===
 
