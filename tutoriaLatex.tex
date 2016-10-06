@@ -239,6 +239,32 @@ By default, tabel pada latex akan menempatkan teks anda di tengah, jika yang and
 \raisebox{-.5\height}{\includegraphics[width=2in]{pict/m1}}
 \end{verbatim}
 
+\section{Menulis Limit dan Integral}
+Untuk menuliskan limit, gunakan kode berikut,
+\begin{verbatim}
+$$\lim_{x\to a} f(x) = L$$ 
+\end{verbatim}
+Hasilnya adalah sebagai berikut, \\
+$$\lim_{x\to a} f(x) = L $$
+Jika kita menulisnya \emph{inline} dengan single \$ maka hasilnya adalah seperti ini:
+$\lim_{x\to a} f(x) = L$
+Untuk integral,
+
+
+\section{Berbagai tanda kurung dan ukurannya}
+By default, kita sering menggunakan tanda kurung "(...)" pada ukuran normal, namun untuk persamaan berupa fraksi atau pembagian, kita membutuhkan tanda kurung dengan ukuran yang lebib besar, caranya adalah sbb,
+\begin{verbatim}
+$\bigl( xxx \bigr)$
+$\Bigl[ xxx \Bigr]$
+$\biggl\{ xxx \biggr\}$
+$\Biggl| xxx \Biggr|$
+\end{verbatim}
+Hasilnya adalah sbb:\\
+$\bigl( xxx \bigr)$ \\
+$\Bigl[ xxx \Bigr]$  \\
+$\biggl\{ xxx \biggr\}$ \\
+$\Biggl| xxx \Biggr|$ 
+
 \section{Bibliography}
 Ada banyak cara untuk memasukkan bibliography atau referensi. Cara yang paling sederhana adalah dengan menggunakan environment yang disebut \texttt{thebibliography}.  Namun, untuk memudahkan manajemen referensi (untuk banyak referensi) biasanya orang menggunkankan BibTeX, yang mengatur sitasi sendiri secara terpisah dalam format file \texttt{*.bib}.  Sitasi dapat ditambahkan dengan: \cite{langer1989}.
 
