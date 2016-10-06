@@ -7,16 +7,18 @@ Kompilasi:
 
 OR
 
-  - $ pdflatex tutorialLtex.tex
+  - $ pdflatex tutorialLatex.tex
 
 To-do list:
 
 - Setup latex with gedit on Ubuntu : Done.
-- how to make list (numbered and unnambered)
+- how to make list (numbered and unnumbered)
 - List
--   numbered
--   unnumbered
-- Code snippet
+-   numbered : Done/
+-   unnumbered : and Done.
+- Code snippet: Done via verbatim.
+- Limit and integral: on progress.
+- Berbagai kurung dan ukurannya: Done.
 - Bibliography
 - Cite Reference, table, graphic
-- beamer
+- Beamer : Separated file, see tes-beamer.tex
