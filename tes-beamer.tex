@@ -33,7 +33,10 @@ Berikut adalah list berupa angka:
 
 \section{2. Memasukkan gambar}
 \begin{frame}[t, fragile]{Slide berisi gambar}
-%\includegraphics[width=4in]{pict/gedit-symbol.png}
+\begin{verbatim}
+\includegraphics[width=4in]{pict/gedit-symbol.png}
+\end{verbatim}
+\includegraphics[width=4in]{pict/gedit-latex.png}
 \end{frame}
 
 \section{3. Membuat kolom}
@@ -46,9 +49,10 @@ Ada kalanya anda perlu membuat kolom, misalnya, gambar dikiri dan teks dikanan, 
 \begin{verbatim}
 \begin{columns}
 \column{.5\textwidth}
-% isi kolom
+% isi kolom1
 \column{.5\textwidth}
-\begin{verbatim}
+% isi kolom2
+\end{column}
 \end{verbatim}
 \end{columns}
 \end{frame}
