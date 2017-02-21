@@ -6,6 +6,7 @@
 \usepackage{authblk}
 \usepackage{listings}
 \usepackage{amssymb}
+\usepackage{amsmath}
 
 \begin{document}
 \title{Tutorial \LaTeX\ Sederhana}
@@ -264,16 +265,54 @@ $$\int \limits_a^{b}f(x) dx$$
 \section{Berbagai tanda kurung dan ukurannya}
 By default, kita sering menggunakan tanda kurung "(...)" pada ukuran normal, namun untuk persamaan berupa fraksi atau pembagian, kita membutuhkan tanda kurung dengan ukuran yang lebib besar, caranya adalah sbb,
 \begin{verbatim}
-$\bigl( xxx \bigr)$
-$\Bigl[ xxx \Bigr]$
-$\biggl\{ xxx \biggr\}$
-$\Biggl| xxx \Biggr|$
+$$\bigl( xxx \bigr)$$
+$$\Bigl[ xxx \Bigr]$$
+$$\biggl\{ xxx \biggr\}$$
+$$\Biggl| xxx \Biggr|$$
 \end{verbatim}
 Hasilnya adalah sbb:\\
-$\bigl( xxx \bigr)$ \\
-$\Bigl[ xxx \Bigr]$  \\
-$\biggl\{ xxx \biggr\}$ \\
-$\Biggl| xxx \Biggr|$ 
+$$\bigl( xxx \bigr)$$ \\
+$$\Bigl[ xxx \Bigr]$$  \\
+$$\biggl\{ xxx \biggr\}$$ \\
+$$\Biggl| xxx \Biggr|$$ 
+
+\section{Membuat matriks}
+Matriks adalah suatu susunan deretan empat persegi panjang dari bilangan-bilangan yang tersusun dalam $m$ baris dan $n$ kolom dalam tanda kurung.\\ 
+Untuk membuat matriks dalam \LaTeX\ perhatikan skrip berikut, \\
+\begin{verbatim}
+\[
+   M=
+  \left[ {\begin{array}{cc}
+   1 & 2 \\       
+   3 & 4       
+  \end{array} } \right]
+\]
+\end{verbatim}
+
+Hasilnya adalah sebagai berikut, \\
+\[
+   M=
+  \left[ {\begin{array}{cc}
+   1 & 2 \\       3 & 4 \      \end{array} } \right]
+\]
+
+Selain cara diatas, bisa juga menggunakan cara berikut,
+\begin{verbatim}
+\[
+   M=
+  \left[ {\begin{array}{cc}
+   1 & 2 \\       3 & 4 \      \end{array} } \right]
+\]
+\end{verbatim}
+Hasilnya sebagai berikut,
+$$
+A = \begin{bmatrix}
+	1 & 2 & 3 \\
+	4 & 5 & 6 \\
+	7 & 8 & 9
+	\end{bmatrix}
+$$
+Saya lebih suka menggunakan cara kedua, namun kita harus menggunakan \verb|\usepackage{amsmath}|.
 
 \section{Bibliography}
 Ada banyak cara untuk memasukkan bibliography atau referensi. Cara yang paling sederhana adalah dengan menggunakan environment yang disebut \texttt{thebibliography}.  Namun, untuk memudahkan manajemen referensi (untuk banyak referensi) biasanya orang menggunkankan BibTeX, yang mengatur sitasi sendiri secara terpisah dalam format file \texttt{*.bib}.  Sitasi dapat ditambahkan dengan: \cite{langer1989}.
