@@ -1,12 +1,12 @@
 \documentclass[12pt]{article}
 
 % Paket-paket yang digunakan pada penulisan artikel ini
-\usepackage{graphicx}
-\usepackage{epstopdf}
+\usepackage{graphicx} % untuk include gambar
+\usepackage{epstopdf} % untuk include gambar eps
 \usepackage{authblk}
-\usepackage{listings}
+\usepackage{listings} 
 \usepackage{amssymb}
-\usepackage{amsmath}
+\usepackage{amsmath} % untuk pers math
 
 \begin{document}
 \title{Tutorial \LaTeX\ Sederhana}
@@ -114,7 +114,7 @@ Jika anda tidak ingin persamaan tersebut berada di tengah, namun anda ingin mena
 \label{einstein1} 
 \end{equation}
 
-Untuk menyitasi/merefer persamaan \ref{einstein1} anda bisa menggunakan \verb|\label{}| dan memanggilnya dengan \verb|\ref{}| seperti pada persamaan \ref{einstein1} diatas. Penulisan persamaan \ref{einstein1} diatas menggunakan environenment yang akan dibahas pada \ref{enviro}.
+Untuk menyitasi/merefer persamaan \ref{einstein1} anda bisa menggunakan \verb|\label{}| didalam block equation dan memanggilnya dengan \verb|\ref{}| seperti pada persamaan \ref{einstein1} diatas. Penulisan persamaan \ref{einstein1} diatas menggunakan environment yang akan dibahas pada \ref{enviro}.
 
 
 Selain text dan persamaan matematika, ada banyak yang bisa kita lakukan dengan \LaTeX\, misalnya untuk membuat tabel, diagram, gambar persamaan bernomor, label, matriks, dll. Anda dapat mengatur batas kanan-kiri, atas-bawah, spasi, alignment,  {\it et cetera} dengan tingkat akurasi yang tinggi dibanding dengan penglihatan manusia. Dengan word processor, anda akan menghabiskan banyak waktu, tapi tidak bila anda menguasai \LaTeX.
@@ -197,7 +197,8 @@ Baris pertama meload class \textit{revtex}. Ini biasanya digunakan untuk persiap
 \section{Membuat List}
 Salah satu teknik penting dalam penulisan adalah dengan memaparkan poin per poin atau yang dikenal dengan list, baik bullet maupun numbering.
 
-Unordered list, Contoh:
+
+Unordered list dengan \verb|itemize|, Contoh:
 \begin{itemize}
 \item Ini adalah unordered list pertama
 \item Ini adalah unordered list kedua
@@ -207,7 +208,7 @@ Unordered list, Contoh:
     \end{itemize}
 \end{itemize}
 
-Ordered list, Contoh:
+Ordered list dengan \verb|enumerate|, Contoh:
 \begin{enumerate}
 \item Ini adalah ordered list pertama
 \item Ini adalah ordered list kedua
@@ -298,11 +299,13 @@ Hasilnya adalah sebagai berikut, \\
 
 Selain cara diatas, bisa juga menggunakan cara berikut,
 \begin{verbatim}
-\[
-   M=
-  \left[ {\begin{array}{cc}
-   1 & 2 \\       3 & 4 \      \end{array} } \right]
-\]
+$$
+A = \begin{bmatrix}
+	1 & 2 & 3 \\
+	4 & 5 & 6 \\
+	7 & 8 & 9
+	\end{bmatrix}
+$$
 \end{verbatim}
 Hasilnya sebagai berikut,
 $$
