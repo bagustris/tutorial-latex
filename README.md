@@ -22,3 +22,4 @@ To-do list:
 - Bibliography
 - Cite Reference, table, graphic
 - Beamer : Separated file, see tes-beamer.tex
+- Cara menambahkan gambar (ref: sharelatex)
