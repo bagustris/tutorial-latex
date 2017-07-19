@@ -11,7 +11,7 @@ OR
 
 To-do list:
 
-- Setup latex with gedit on Ubuntu : Done.
+- ~~Setup latex with gedit on Ubuntu : Done~~
 - how to make list (numbered and unnumbered)
 - List
 -   numbered : Done/
@@ -23,3 +23,4 @@ To-do list:
 - Cite Reference, table, graphic
 - Beamer : Separated file, see tes-beamer.tex
 - Cara menambahkan gambar (ref: sharelatex)
+- Mensejajarkan sama dengan untuk persamaan mutli-line
