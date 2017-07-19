@@ -317,6 +317,35 @@ A = \begin{bmatrix}
 $$
 Saya lebih suka menggunakan cara kedua, namun kita harus menggunakan \verb|\usepackage{amsmath}|.
 
+\section{Berbagai ragam persamaan matematik}
+Kekuatan utama \LaTeX\ adalah keindahannya dalam menuliska  persamaan matematika. Secara sederhana sebuah persamaan dapat ditulis sebagai berikut, \\
+\begin{verbatim}
+$$ x = A s $$
+\end{verbatim}
+Hasilnya adalah sebagai berikut, \\
+$$ x = A s $$
+Persamaan diatas adalah tanpa nomor, namum muncul di tengah. Apabila menginginkan persamaan yang menyatu dengan baris, cukup ditulis dengan tanda dolar satu, \verb|$ persamaan $|, contohnya adalah sepertini ini $ x = A s $.
+
+Apabila menginginkan penomoran persamaan maka dapat dituliskan diantara \verb|\begin{equation}| dan \verb|\end{equation}| contohnya adalah sebagai berikut,
+\begin{equation}
+$$ x = A s $$
+\end{equation}
+
+\subsection{meratakan sama dengan pada persamaan banyak baris}
+Untuk meratakan tanda sama dengan pada persamaan matematika banyak baris dapat digunkanan dengan \verb|\begin{align*}| sebagai berikut,
+\begin{verbatim}
+% tanda bintang untuk tanpa nomor persamaan
+% jika tanpa sama dengan gunakan gather* daripada align*
+\end{align*}
+\end{verbatim}
+Hasilnya adalah sebagai berikut,
+\begin{align} 
+x &= A s\\  
+  &= c
+\end{align}
+
+Jika ingin menghilangkan penomoran persamaan, tambahkan tanda bintang setelah \verb|align|.
+
 \section{Bibliography}
 Ada banyak cara untuk memasukkan bibliography atau referensi. Cara yang paling sederhana adalah dengan menggunakan environment yang disebut \texttt{thebibliography}.  Namun, untuk memudahkan manajemen referensi (untuk banyak referensi) biasanya orang menggunkankan BibTeX, yang mengatur sitasi sendiri secara terpisah dalam format file \texttt{*.bib}.  Sitasi dapat ditambahkan dengan: \cite{langer1989}.
 
