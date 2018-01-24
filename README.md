@@ -24,3 +24,5 @@ To-do list:
 - Beamer : Separated file, see tes-beamer.tex
 - Cara menambahkan gambar (ref: sharelatex)
 - Mensejajarkan sama dengan untuk persamaan mutli-line
+- Menghapus file atribut (dengan latexmk)
+- Membuat makefile untuk texfile
