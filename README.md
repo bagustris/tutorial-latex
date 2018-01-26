@@ -26,3 +26,4 @@ To-do list:
 - Mensejajarkan sama dengan untuk persamaan mutli-line
 - Menghapus file atribut (dengan latexmk)
 - Membuat makefile untuk texfile
+- Memasukkan kanji dan furigana kedalam latex (ruby)
