@@ -43,6 +43,7 @@ There are three commands here that work the same in the example:
 ```
 --- 
 Force image position:  
+```
 \usepackage{float}  
 ...
 \begin{figure}[H]  
@@ -50,15 +51,16 @@ Force image position:
 \includegraphics{slike/visina8}
 \caption{Write some caption here}\label{visina8}
 \end{figure}
-
+```
 --- 
 make two column: 
+```
 \documentclass[twocolumn]{article}
 ...
 \twocolumn
 
 \onecolumn
-
+```
 ---
 clean latex:  
 latexmk -C
