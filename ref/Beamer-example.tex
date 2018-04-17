@@ -1,0 +1,175 @@
+%\documentclass{beamer}
+\documentclass[envcountsect]{beamer}
+
+\usepackage{multimedia}
+
+
+\mode<presentation>
+{
+% \usetheme{Berlin}
+  % or ...
+%\usetheme{default}
+%\usetheme{PaloAlto}
+%\usetheme{Malmoe}
+%\usetheme{Warsaw}
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+\usecolortheme{wolverine}
+%\usefonttheme{serif}
+%\setbeamertemplate{blocks}[rounded][shadow=true]
+%\usecolortheme{sidebartab}
+
+%\setbeamercolor{some beamer element}{fg=red}
+}
+\beamertemplateballitem
+
+\usepackage{color}
+%\usepackage[english]{babel}
+% or whatever
+
+%\usepackage[latin1]{inputenc}
+% or whatever
+
+%\usepackage{helvetica}
+\usepackage{accents}
+\usepackage{hyperref}
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+\newcommand{\ul}{\underline}
+\newcommand{\vx}{\bf x}
+\newcommand{\la}{\lambda}
+\newcommand{\e}{{\rm e}}
+
+
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{quest}{Question}
+\newtheorem{remark}{Remark}
+
+
+
+\title
+{Presentation with sound \newline Example for Beamer}
+\author[]{Tatiana}
+\institute[University of Leicester]
+{University of Leicester}
+
+
+\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\begin{frame}
+%\sound[autostart, inlinesound]{}{show.wav}
+  \titlepage
+  \transduration{5}
+\end{frame}
+
+\begin{frame}
+\frametitle{Structure }
+\tableofcontents
+\transduration{5}
+%\sound[autostart, start=10.5s, inlinesound]{}{show.wav}
+\end{frame}
+
+
+\section{1.Sound}
+\begin{frame}
+\frametitle{Insert file as sound}
+\transwipe \transduration{10}
+\sound[autostart, start=5s, duration=15s, inlinesound]{}{show.wav}
+Sound file can be easily added to every slide of the presentation using command {\it $\setminus$sound}.\\
+see Manual page 130\\
+
+\vspace{10pt}
+It can be played from the very beginning of the slide...
+\end{frame}
+
+\begin{frame}
+\frametitle{Sound}
+\transblindsvertical
+\transduration{30}
+
+
+... or it can be played if {\it button} (below) is pressed...\\
+\vspace{10pt}
+
+\sound[start=5s, inlinesound]{{ \it button} }{show.wav}\\
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Sound} \transblindsvertical \transduration{40}
+\sound[label=show1, inlinesound]{}{show.wav}\\
+
+... or it can be played using {\it Beamer button} and {\it $\setminus$hyperlink} command.\\
+\hyperlinkmovie[start=5s]{show1}{\beamerbutton{Play Sound}} (press it)\\
+
+ \vspace{10pt}
+ Or you can keep control in your hands and define where
+to play sound and duration...
+\transwipe \transduration{20}
+\end{frame}
+\begin{frame}
+\frametitle{Sound} \transblindshorizontal
+\begin{theorem}
+It is possible to play sound piece-wise
+\begin{enumerate}
+\item<1-> present the 1st piece;
+    \only<1>{\sound[autostart,start=1s,duration=18s,inlinesound]{}{paganini.wav}
+    \transduration{18}}
+\item<2-> no sound on this piece;
+    \only<2>{\transduration{10}}
+\item<3-> present the last piece
+\only<3>{\sound[autostart,start=18.5s,inlinesound]{}{paganini.wav}
+    \transduration{20}}
+\end{enumerate}
+\end{theorem}
+\only<4>{
+And, finally, add some more comments
+\sound[autostart,inlinesound]{}{paganini.wav}
+\transduration{40}
+}
+\end{frame}
+
+
+\section{2. Movie}
+
+\begin{frame}
+\frametitle{Insert sound as movie}
+\transglitter \movie[label=show,
+start=5s]{}{show.wav}
+Sound file can be added using {\it $\setminus$movie} command.\\
+ See Page 125 for more options.\\
+
+In this case it is possible to control  the file with buttons\\
+
+\hyperlinkmovie[play]{show}{\beamerbutton{play}}
+\hyperlinkmovie[pause]{show}{\beamerbutton{pause}}
+\hyperlinkmovie[resume]{show}{\beamerbutton{resume}}
+\hyperlinkmovie[stop]{show}{\beamerbutton{stop}}
+
+but you need more time for this slide to be on the screen\\
+{\it $\setminus$transduration$\{60\}$}  \\
+
+  ( This slide is staying on the screen for  60 seconds)
+
+\transduration{60}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Final}
+\transglitter
+\movie[autostart,start=64s, duration=13s]{}{show.wav}
+
+\center{\large{show must go on...} \transduration{15}}
+\sound[inlinesound,encoding=signed,channels=2]{Play the sound!}{clean_speech.wav}
+\end{frame}
+
+\end{document}
