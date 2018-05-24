@@ -141,7 +141,7 @@ Ini adalah cara kedua.
 \end{center}
 
 \noindent Sebenarnya ada cara lain yang digunakan sebagaimana contoh di atas. Misalnya,
-{\sc seperti ini}. Cara anda masuk dan keluar bergantung pada jenis "environment" yang anda gunakan; misalnya anda menggunakan\verb|\underline| "diluar" dan \verb|\it| "didalam"; 
+{\sc seperti ini}. Cara anda masuk dan keluar bergantung pada jenis "environment" yang anda gunakan; misalnya anda menggunakan \verb|\underline| "diluar" dan \verb|\it| "didalam"; 
 perhatikan \underline{ini} versus {\it ini}.
 
 
@@ -236,6 +236,11 @@ Hasilnya adalah sebagai berikut,\\
 \end{tabular}
 \\
 \\
+dengan l, c dan r merupakan kepanjangan dari \textit{italic, center, right}.
+Agar bisa memberi label dan caption pada tabel, kita perlu menambahkan \\ 
+\verb| \begin{table} .. \end{table}| \\
+diantara tabular. Untuk memambahkan garis horizonal gunakan \texttt{\textbackslash hline} sedang untuk garis vertikal gunakan $\mid$.
+
 By default, tabel pada latex akan menempatkan teks anda di tengah, jika yang anda masukkan berupa gambar, maka gunakan perintah berikut agar vertically centered.
 \begin{verbatim}
 \raisebox{-.5\height}{\includegraphics[width=2in]{pict/m1}}
@@ -347,7 +352,8 @@ x &= A s\\
 Jika ingin menghilangkan penomoran persamaan, tambahkan tanda bintang setelah \verb|align|.
 
 \section{Bibliography}
-Ada banyak cara untuk memasukkan bibliography atau referensi. Cara yang paling sederhana adalah dengan menggunakan environment yang disebut \texttt{thebibliography}.  Namun, untuk memudahkan manajemen referensi (untuk banyak referensi) biasanya orang menggunkankan BibTeX, yang mengatur sitasi sendiri secara terpisah dalam format file \texttt{*.bib}.  Sitasi dapat ditambahkan dengan: \cite{langer1989}.
+Ada banyak cara untuk memasukkan bibliography atau referensi. Cara yang paling sederhana adalah dengan menggunakan environment yang disebut \texttt{thebibliography}.  Namun, untuk memudahkan manajemen referensi (untuk banyak referensi) biasanya orang menggunkankan BibTeX, yang mengatur sitasi sendiri secara terpisah dalam format file \texttt{*.bib} dan dimasukkan kedalam latex dengan perintah \verb|\bibliography|. 
+Kita bisa menggunakan style sitasi \texttt{ieetr, plain, apalike} dan lainnya. Sitasi dapat ditambahkan dengan: \cite{langer1989}.
 
 \begin{thebibliography}{9}
 
