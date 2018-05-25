@@ -9,6 +9,12 @@ OR
 
   - $ pdflatex tutorialLatex.tex
 
+Membuat slide presentasi dengan latex beamer:  
+- Tutorial dan template ada di direktory beamer-template
+- style (\*.sty) ada di dir beamer-template/torino
+- copy semua file sty tersebut di //home//username/tex/latex/beamer 
+(asumsi sudah menginstall latex\-beamer)
+
 To-do list:
 
 - ~~Setup latex with gedit on Ubuntu : Done~~
