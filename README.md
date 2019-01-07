@@ -18,18 +18,15 @@ Membuat slide presentasi dengan latex beamer:
 To-do list:
 
 - ~~Setup latex with gedit on Ubuntu : Done~~
-- how to make list (numbered and unnumbered)
-- ~~List
--   numbered : Done/
--   unnumbered : and Done.~~
+- ~~how to make list (numbered and unnumbered)~~
 - Code snippet: Done via verbatim.
 - Limit and integral: on progress.
 - ~~Berbagai kurung dan ukurannya: Done.~~
-- Bibliography
-- Cite Reference, table, graphic
-- Beamer : Separated file, see tes-beamer.tex
-- Cara menambahkan gambar (ref: sharelatex)
+- ~~Bibliography~~
+- ~~Cite Reference, table, graphic~~
+- ~~Beamer : Separated file~~, see tes-beamer.tex
+- ~~Cara menambahkan gambar (ref: sharelatex)~~
 - Mensejajarkan sama dengan untuk persamaan mutli-line
 - Menghapus file atribut (dengan latexmk)
 - Membuat makefile untuk texfile
-- Memasukkan kanji dan furigana kedalam latex (ruby)
+- ~~Memasukkan kanji dan furigana kedalam latex (ruby)~~, see [this.](https://bagustris.blogspot.com/2018/04/menulis-kanji-pada-latex.html)
