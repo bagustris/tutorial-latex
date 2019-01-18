@@ -340,9 +340,11 @@ Apabila menginginkan penomoran persamaan maka dapat dituliskan diantara \verb|\b
 $$ x = A s $$
 \end{equation}
 
-\subsection{meratakan sama dengan pada persamaan banyak baris}
+\subsection{Meratakan sama dengan pada persamaan banyak baris}
 Untuk meratakan tanda sama dengan pada persamaan matematika banyak baris dapat digunkanan dengan \verb|\begin{align*}| sebagai berikut,
+
 \begin{verbatim}
+\begin{align*}
 % tanda bintang untuk tanpa nomor persamaan
 % jika tanpa sama dengan gunakan gather* daripada align*
 \end{align*}
@@ -355,8 +357,26 @@ x &= A s\\
 
 Jika ingin menghilangkan penomoran persamaan, tambahkan tanda bintang setelah \verb|align|.
 
+\section{Menginstall package dari CTAN}
+Ada kalanya package/class/sty yang kita inginkan tidak ada di (Ubuntu) repository. 
+Jika ini yang terhadi, kita terpaksa menginstallnya secara manual. Begini caranya.
+
+\begin{enumerate}
+\item Download paketnya dari ctan, misal: \\
+\verb|wget http://ctan.tug.org/install/fonts/psfonts/fontfabrik/thsmc.tds.zip| 
+\item Unzip paket tersebut \\
+\verb|unzip thsmc.tds.zip -d thsmc.tds|
+\item Copy isi paket ke $TEXMF$: \\
+ sudo cp -r thsmc.tds /usr/share/texmf/
+\item Update updmap dan texhash:
+\begin{verbatim}
+$ updmap
+$ sudo texhash
+\end{verbatim}
+\end{enumerate}
+
 \section{Bibliography}
-Ada banyak cara untuk memasukkan bibliography atau referensi. Cara yang paling sederhana adalah dengan menggunakan environment yang disebut \texttt{thebibliography}.  Namun, untuk memudahkan manajemen referensi (untuk banyak referensi) biasanya orang menggunkankan BibTeX, yang mengatur sitasi sendiri secara terpisah dalam format file \texttt{*.bib} dan dimasukkan kedalam latex dengan perintah \verb|\bibliography|. 
+Ada banyak cara untuk memasukkan bibliography atau referensi. Cara yang paling sederhana adalah dengan menggunakan environment yang disebut \texttt{thebibliography}.  Namun, untuk memudahkan manajemen referensi (untuk banyak referensi) biasanya orang menggunakan BibTeX, yang mengatur sitasi sendiri secara terpisah dalam format file \texttt{*.bib} dan dimasukkan kedalam latex dengan perintah \verb|\bibliography|. 
 Kita bisa menggunakan style sitasi \texttt{ieetr, plain, apalike} dan lainnya. Sitasi dapat ditambahkan dengan: \cite{langer1989}.
 
 \begin{thebibliography}{9}
