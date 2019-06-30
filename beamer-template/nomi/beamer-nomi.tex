@@ -1,0 +1,302 @@
+% beamer-nomi.tex
+% template for presentation while officialy make presentation
+% with JAIST as institution
+
+% compilation:
+% pdflatex filename.tex # but all path inside should be changed
+
+\pdfminorversion=4
+\documentclass{beamer}
+\usepackage{animate} % for animation
+\usepackage{array,multirow,graphicx}
+\usepackage{algorithm,algorithmic}
+\usepackage{verbatim}
+\graphicspath{{/media/bagustris/atmaja/mypaper/2018/avec2018/}{./fig/}} 
+\setbeamertemplate{caption}[numbered]
+
+\usetheme[pageofpages=of,% String used between the current page and the
+                         % total page count.
+          alternativetitlepage=true,% Use the fancy title page.
+          titleline=true,
+          titlepagelogo=/media/bagustris/bagus/Pictures/logo/jaist_logo-3.png
+%          titlepagelogo=fig/jaist_logo.png
+          ]{Torino}
+          % change /beamerinnerthemefancy.sty to resize the logo
+\usecolortheme{freewilly}
+
+\author{Bagus Tris Atmaja \\ 
+        bagus@jaist.ac.jp}
+\title{\LARGE{Beamer Nomi: \vspace{5pt}
+            \newline A beamer template for JAIST }}
+\institute{AIS-Lab \\ School of Information Science \\ JAIST}
+%\date{October 29, 2018}
+
+% The log drawn in the upper right corner.
+\logo{\includegraphics[height=0.11\paperheight]{/media/bagustris/bagus/Pictures/logo/jaist_logo-1.png}}
+
+\begin{document}
+
+\begin{frame}[t,plain]
+\titlepage
+\end{frame}
+
+
+\begin{frame}[t, fragile]{Motivation}
+\begin{itemize}
+  \item First motivation, \verb|within \itemize|
+  \item Second motivation, \verb|with \item|
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Problem}
+\begin{itemize}
+\item   Given a set of (cross-cultural) dataset (train and devel) with its label, 
+        how to predict emotion dimension on test data?
+\item   How to build multimodal emotion recogniton with LSTM network?
+\item   How feature selection can improve AER? \\
+\vspace{5pt}
+Purpose: \\
+\item Build multimodal emotion recognition using feature selection and LSTM, compare 
+with baseline sytem (without feature selection)
+\end{itemize}
+\end{frame}
+
+%\begin{frame}[t, fragile]{Research Proposal　and Motivation}
+%	\begin{itemize}
+%		\item Main purpose: \\
+%				Robust speech emotion recognition system by utilizing acoustic 
+%						and text feature.
+%		\item Steps: \\
+%		\begin{enumerate}
+%			\item Build speech emotion recognition by using LSTM-RNN\footnotemark ~algorithm from sequential 
+%			acoustic feature and/or CNN\footnotemark ~algorithm from spectrograms feature.
+%			\item Build text emotion recognition by using new ANEW (Affective 
+%			norms for English word) analysis and compare it to machine learning method.
+%			\item Integrate step 1 and 2 to improve speech emotion performance.
+%		\end{enumerate}
+%	\end{itemize}
+%\centering 
+%\footnotetext[1]{\tiny Long short term memory - recurrent neural network}
+%\footnotetext[2]{\tiny Convolutional neural network}
+%\end{frame}
+
+\begin{frame}[t, fragile]{Example of Table}
+\begin{itemize}
+\item SEWA dataset is used, consisting audiovisual spontaneous behaviors of 
+      participant recorded \emph{in-the-wild}.
+\item Annotation (labels) is available for the emotional dimensions arousal and valence, and a third dimension describing liking (or sentiment), by 6 (German) or 5 (Hungarian) native speakers.
+\end{itemize}
+\begin{table}[ht]
+  \caption{Number of instance for each partition of recordings}
+  \label{tab:instance}
+  \begin{tabular}{c c c c c}
+    \hline
+    Partitions & German & Hungarian & Labels & Total \\
+    \hline
+    Training	&	34	&	-	& $\checkmark$	&	34	\\
+	Development	&	14	&	-	& $\checkmark$	&	14	\\
+	Testing		&	16	&	66	&	-			&	82	\\
+	Total		&	64	&	66	&	130			&	130	\\
+	\hline
+	\end{tabular}
+
+\end{table}
+
+\end{frame}
+
+\begin{frame}[t, fragile]{Example of footnote as reference}
+\begin{itemize}
+\item Use \verb|\footnotetext| for Reference.
+\item Use \verb|\footnotemark| to mark.
+\item Available features:
+\end{itemize}
+\begin{table}
+  \caption{ Number of audio and video features}
+  \label{tab:numfeatures}
+  \begin{tabular}{c c c}
+    \hline
+    Model & LLDs & Bag of words \\
+    \hline
+    Audio	&	23 eGeMAPS	& 100	\\
+			&	39 MFCCs	& 100	\\
+	Visual	&	17 FAUs	&	100	\\
+	\hline
+	\end{tabular}
+\end{table}
+\footnotetext{\centering eGeMAPS: Geneva Minimalistic Acoustic Parameter Set, Eyben et. al., 2013 \\
+              MFCCs: 1 to 13, inculding deltas and deltas-deltas, totally 39 \\
+              FAU: Facial Action Units}
+\end{frame}
+
+\begin{frame}[t, fragile]{Example of footnote}
+\begin{itemize}
+\item Use \verb|\centering| for centering footnote, sometimes looks ugly.
+\item Use \verb|\tiny| to make footnote text tiny\footnotemark.
+\item Line above footnote is automatic.
+\item figure within \verb|\item| doesn't need \verb|\centering|
+\includegraphics[width=3.5in]{/media/bagustris/atmaja/s3/kenkyu/pic/aco.png}
+\end{itemize}
+\footnotetext{\tiny F. Ringeval et al., “AVEC 2017-Real-life Depression, and Affect Recognition Workshop and Challenge,” 2017.}
+\end{frame}
+
+\begin{frame}[t, fragile]{Example of Table: plain latex}
+\begin{center}
+\includegraphics[width=3in]{/media/bagustris/atmaja/mypaper/2018/avec2018/pict/svm3.png}
+\begin{table}
+  \caption{Result of Optimal Set algorithm using visual features (BoVW FAUs)}
+  \label{tab:val}
+  \begin{tabular}{c c c c c c}
+    \hline
+    Valence FID	& CCC & Arousal FID	& CCC	& Liking FID &	CCC \\
+    \hline
+	VI31	&	0.192	&	VI31	&	0.274	&	VI99	&	0.098	\\
+	VI17	&	0.170	&	VI17	&	0.239	&	VI74	&	0.055	\\
+	VI60	&	0.153	&	VI62	&	0.187	&	VI41	&	0.041	\\
+	VI20	&	0.147	&	VI20	&	0.177	&	VI40	&	0.027	\\
+	VI35	&	0.125	&	VI60	&	0.164	&	VI12	&	0.019	\\
+	\hline
+	\end{tabular}
+\end{table}
+\end{center}
+\end{frame}
+
+\begin{frame}[t, fragile]{Example algorithm, need algorithmic package}
+ \begin{algorithmic}[1]
+    \STATE  Input gold standard values for emotion 
+        dimension $ED_i$ for development partition.
+    \STATE Input features sorted by abs(CCC):
+        \\ $f_1, f_2, f_3,...,f_n$ 
+    \STATE Input impact $CCC_1$  of  $f_1$ 
+    \STATE $Optimal\_Set = \{f_1\}, CCC\_Optimal = CCC_1$
+    \FOR {$f_j$ in {$f_1, f_2, f_3, ..., f_n$}}
+  \STATE $CCC_j$=CCC(Predict ([$Optimal\_Set, f_j$]))
+  \IF {$CCC_j > CCC\_Optimal$ }
+  \STATE $CCC\_Optimal = CCC_j$        
+        \\ $Optimal\_Set = [Optimal\_Set, f_j]$
+  \ENDIF
+  \ENDFOR
+ \RETURN $Optimal\_Set, CCC\_Optimal$
+ \end{algorithmic} 
+\end{frame}
+
+%\begin{frame}[t, fragile]{Text Features: bag-of-word}
+%\begin{itemize}
+%\item a bag-of-words feature representation based on the transcription of the speech are generated with openXBOW\footnotemark ~and used as additional features. 
+%\item The dictionary for these textual features is learnt from the training partition taking only the terms with at least two occurrences into account. This results in a dictionary of "n-number" words, where only unigrams are considered. 
+%\item In total, the bag-of-text-words (BoTW) features contain "n-number" features. This text features will be trained along with acoustic feature fed to LSTM network.
+%\end{itemize}
+%\footnotetext[5]{\tiny Maximilian Schmitt and Bj¨orn W. Schuller. 2016. openXBOW – Introducing the Passau open-source crossmodal Bag-of-Words toolkit. preprint arXiv:1605.06778 (2016).}
+%\end{frame}
+
+\begin{frame}[t, fragile]{Method: LSTM network}
+\begin{itemize}
+\item Using LSTM algorithm to train valence, arousal and liking 
+      from German language to predict its dimension from different 
+      number of acoustic and visual features.
+\item LSTM network can model the context (VAD value) while
+      insensitive to outliers\footnotemark
+\item Network architecture:\\
+\includegraphics[width=4in]{/media/bagustris/atmaja/mypaper/2018/avec2018/pict/system.eps}
+\end{itemize}
+\footnotetext{\tiny P. Tzirakis, G. Trigeorgis, M. A. Nicolaou, B. Schuller, and S. Zafeiriou, “End-to-End Multimodal Emotion Recognition using Deep Neural Networks,” vol. 14, no. 8, pp. 1–9, 2017.}
+\end{frame}
+
+\begin{frame}[t, fragile]{Use column two divide into 2 sides}
+\begin{columns}
+\column{.4\textwidth} 
+\begin{table}
+  \caption{Parameters in LSTM network}
+  \label{tab:lstm}
+  \begin{tabular}{ll}
+    \hline
+    Parameter & Value \\
+    \hline
+    batch size    & 34       \\
+    learning rate & 0.001    \\
+    num iter      & 50      \\
+    num units 1   & 128     \\
+    num units 2   & 64      \\
+    bidirectional & False    \\
+    dropout       & 0.2     \\
+    \hline
+\end{tabular}
+\end{table}
+\column{.6\textwidth} 
+\includegraphics[width=2.7in]{/media/bagustris/atmaja/mypaper/2018/avec2018/pict/lstm.eps}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t, fragile]{Example of Equations}
+We use the following objective function to measure the performance.
+$x$ is each VAD (valence, arousal, dominance) score from dataset, 
+and $y$ is predicted each VAD score from our algorithm.
+
+\begin{itemize}
+\item Concordance Correlation Coefficient (CCC): 
+\begin{equation}
+	CCC_i = \dfrac{2\rho \sigma_x \sigma_y}
+			{\sigma_x^2 + \sigma_y^2 + (\mu_x - \mu_y)^2}
+\label{eq:ccc}
+\end{equation}
+
+The average of CCC for the three-emotion dimension is used as a measure for the performance of the whole system; 
+this measure is defined by the following equation.  
+
+\begin{equation}
+	CCC_{avg} = \dfrac {\Sigma~CCC_i}{n}
+\end{equation}
+
+\noindent
+where $n$ is number of $i$ dimension, i.e. 3 (valence, arousal, liking).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[t, fragile]{Example of full table}
+\begin{table}[ht]
+\centering
+\caption{Evaluation results using mono-language case by using the development partition form German language using selected features from audio-video modalities }
+\begin{tabular}{c c c c c}
+\hline
+Features Set	&	Arousal	&	Valence	&	Liking	&	Average \\
+\hline
+Baseline (100) 	&	0.552	&	0.563	&	0.238	&	0.451 \\
+Selected (6)	&	0.641	&	0.636	&	0.278	&	0.518 \\
+Selected (10)	&	0.660	&	0.620	&	0.298	&	0.526 \\
+Selected (15)	&	0.622	&	0.623	&	\textbf{0.314}	&	0.520 \\
+Selected (20)	&	0.616	&	0.596	&	0.299	&	0.504 \\
+Optimal Set	&		\textbf{0.678}	&		\textbf{0.654}	&	0.304	&	\textbf{0.545} \\
+\hline
+\end{tabular}
+\label{tab:DevelDE}
+\end{table}
+\end{frame}
+
+\begin{frame}[t, fragile]{Result: Testing Data}
+\includegraphics[width=4.5in]{/media/bagustris/atmaja/mypaper/2018/avec2018/pict/compareCCC.png}
+\end{frame}
+
+\begin{frame}[t, fragile]{Conclusion}
+\begin{itemize}
+	\item The use of deep learning technique (LSTM-RNN/CNN) for dimensional 
+	      speech emotional recognition from multimodal feauture has been presented.
+	\item The number of dominant feature extracted from bag-of-acoustic-words
+	      (BoAW) and bag-of-text-words (BoTW) that contributes significantly to 
+	      speech emotion recognition
+	      performance by feature selection algorithm.
+	\item The result shows promising result on development data, slightly improvement on 
+	      testing data, but poor performance on cross-cultural test data, due to 
+	      limitation of dataset.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[t, fragile]{Remaining Problem/Future Works}
+\begin{itemize}
+\item Use total CCC instead of averaged CCC as overall accurate prediction is desired.
+\item Compare Acoustic feature only to Audio/Video-based.
+\item Implement the similar scenario for IEMOCAP dataset.
+\end{itemize}
+\end{frame}
+\end{document}
+
