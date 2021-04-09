@@ -65,13 +65,13 @@ make two column:
 clean latex:  
 latexmk -C
 
----
 --- 
 multiline in table:  
 1. using nested tabular
 2. using p insteal of l, c, or r
 
 
+---  
 
 latex-suite cheatsheet:  
 https://michaelgoerz.net/refcards/vimlatexqrc.pdf
